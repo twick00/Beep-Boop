@@ -12,13 +12,28 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <form id="beep-boop-form">
-                <div class="form-group">
-                    <label for="beep-boop-button">Enter a number to Beep-Boop to:</label>
-                    <input id="beep-boop-button" class="form-control" type="text" value=""> 
-                </div>  
-                <button type="submit" class="btn">Beep-Boop!</button>
-            </form>
+            <div class="col-md-12">
+                <form id="user-name">
+                    <label for="input-name">(Optional) Enter a name:</label>
+                    <input id="input-name" class="form-control" type="text">
+                </form>
+                <form id="beep-boop-form">
+                    <div class="form-group">
+                        <label for="beep-boop-button">Enter a number to Beep-Boop to:</label>
+                        <input id="beep-boop-button" class="form-control" type="text" value="" required>
+                    </div>
+                    <button type="submit" class="btn">Beep-Boop!</button>
+                </form>
+            </div>
+            <div class="row">
+                <div class="col-md-12 results">
+                    <h3 class="error">Here is the output:</h3>
+                    <br>
+                    <ol id="output">
+
+                    </ol>
+                </div>
+            </div>
         </div>
     </div>
 </body>
