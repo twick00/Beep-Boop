@@ -1,13 +1,13 @@
 $(document).ready(function () {
     $("#beep-boop-form").submit(function (event) {
+        event.preventDefault();
         var userName;
+        var userInput;
+        var userOutput;
+        $("#output").text("");
         if ($("#input-name").val() != "") {
             userName = $("#input-name").val();
         }
-        event.preventDefault();
-        $("#output").text("");
-        var userInput;
-        var userOutput;
         if (parseInt($("#beep-boop-button").val()) < 0) {
             $("#output").append("Please enter a positive number");
         } else if (parseInt($("#beep-boop-button").val()) > 0) {
@@ -27,9 +27,6 @@ $(document).ready(function () {
     });
 });
 
-function appendList(numbers) {
-    return '<div class="col-lg-2">' + '<li>' + numbers + '</li>' + '</div';
-}
 
 function main(userInput, userName) {
     var numberArray = [];
@@ -51,6 +48,10 @@ function main(userInput, userName) {
         }
     });
     return numberArray;
+}
+
+function appendList(numbers) {
+    return '<div class="col-lg-2">' + '<li>' + numbers + '</li>' + '</div';
 }
 
 function checkBeep(number, tempString) {
