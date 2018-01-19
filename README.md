@@ -2,7 +2,7 @@
 
 This program is intended to be similar to the classic programming problem Fizz-Buzz.
 
-## Explination
+## Explanation
 
 When a user enters a number into the text field and presses submit, the program then evaluates every number between 0 and the user inputted number for the following:
 
