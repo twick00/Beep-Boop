@@ -68,8 +68,8 @@ function checkBoop(number, tempString) {
         if (number.toString()[i] == 1) {
             tempString = "Boop!";
         }
-        return tempString;
     }
+    return tempString;
 }
 
 function checkSorry(number, tempString, userName) {
